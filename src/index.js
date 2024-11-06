@@ -5,16 +5,26 @@ const searchBox = document.querySelector('#search-box');
 const searchButton = document.querySelector('#search-button');
 const img = document.querySelector('img');
 
+const giphyKey = '8Ia7X2AHWHiSfcPIeyQkEnjROa87LlrW';
+
 searchButton.addEventListener('click', (event) => {
-  
+  event.preventDefault();
+  if (searchBox.value !== ''){
+    getGif(searchBox.value);
+  }
 });
 
-function getGif(query) {
-  fetch(`https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=${query}`, {mode: 'cors'})
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(response) {
-      console.log(response);
-    });
+async function getGif(query) {
+  console.log('...getting gif');
+
+  const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${giphyKey}&s=${query}`, {mode: 'cors'});
+  const data = await response.json();
+  console.log(data);
+
+  // if (response.ok){
+  //   console.log(response.json());
+  // }
+  // else {
+  //   throw new Error('Something went wrong: ' + response);
+  // }
 }
