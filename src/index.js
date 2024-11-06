@@ -24,9 +24,12 @@ async function getGif(query) {
     }
 
     const data = await response.json();
-    console.log(data);
+    const gifUrl = data.data.images.preview_webp.url;
+
+    console.log('Setting image...' + gifUrl);
+    container.style.backgroundImage = `url(${gifUrl})`
   }
-  catch {
+  catch (error) {
     console.error(error.message);
   }
 }

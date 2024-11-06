@@ -20,8 +20,8 @@
   align-self: center;
   height: fit-content;
   width: fit-content;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #search-box,
@@ -33,6 +33,6 @@
 }
 
 #search-button {
-  background-color: rgba(97, 249, 16, 0.757);
+  background-color: rgba(92, 221, 22, 0.5);
 }
 
