@@ -15,16 +15,18 @@ searchButton.addEventListener('click', (event) => {
 });
 
 async function getGif(query) {
-  console.log('...getting gif');
+  const url = `https://api.giphy.com/v1/gifs/translate?api_key=${giphyKey}&s=${query}`;
 
-  const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${giphyKey}&s=${query}`, {mode: 'cors'});
-  const data = await response.json();
-  console.log(data);
+  try {
+    const response = await fetch(url, {mode: 'cors'});
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
 
-  // if (response.ok){
-  //   console.log(response.json());
-  // }
-  // else {
-  //   throw new Error('Something went wrong: ' + response);
-  // }
+    const data = await response.json();
+    console.log(data);
+  }
+  catch {
+    console.error(error.message);
+  }
 }
