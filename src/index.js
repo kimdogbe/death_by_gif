@@ -5,7 +5,7 @@ const searchBox = document.querySelector('#search-box');
 const searchButton = document.querySelector('#search-button');
 const img = document.querySelector('img');
 
-const giphyKey = '8Ia7X2AHWHiSfcPIeyQkEnjROa87LlrW';
+const giphyKey = 'YOUR_GIPHY_API_KEY';
 
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();
