@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2pqdnNuNjl0eDM2dGJ1MHdqMDkyNnd4dmdkbHZ1OW5tZjNoN3lnNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEduLK4QMPuHS1Td6/giphy.webp');
+  /* background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY240Nmk5eXMxMnA4b3Ixdjh1Z2Zvbm5tYTY2YXJqdHUxaGxocXRvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YyKPbc5OOTSQE/giphy.webp'); */
+  background-size: 100px;
+}
+
+#search-area {
+  display: flex;
+  background-color: rgba(84, 112, 137, 0.5);
+  justify-self: center;
+  align-self: center;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#search-box,
+#search-button {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#search-button {
+  background-color: rgba(97, 249, 16, 0.757);
+}
+
